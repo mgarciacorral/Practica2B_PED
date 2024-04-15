@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7b7eb0c-f864-4628-9490-25ba702b49da" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/LECola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corredor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corredor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/ArrayCola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/ArrayCola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,6 +71,7 @@
       <workItem from="1712161046232" duration="550000" />
       <workItem from="1713175724214" duration="63000" />
       <workItem from="1713178638815" duration="27000" />
+      <workItem from="1713194114748" duration="1143000" />
     </task>
     <servers />
   </component>
