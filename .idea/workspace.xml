@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7b7eb0c-f864-4628-9490-25ba702b49da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/LECola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b7b7eb0c-f864-4628-9490-25ba702b49da" name="Changes" comment="tres primeras opc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Carrera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Carrera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Corredor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corredor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/ArrayCola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/ArrayCola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/LECola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/LECola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +72,26 @@
       <workItem from="1713175724214" duration="63000" />
       <workItem from="1713178638815" duration="27000" />
       <workItem from="1713194114748" duration="1143000" />
+      <workItem from="1713195941809" duration="449000" />
+      <workItem from="1713257921719" duration="79000" />
+      <workItem from="1713259444985" duration="1049000" />
     </task>
+    <task id="LOCAL-00001" summary="tres primeras opc">
+      <option name="closed" value="true" />
+      <created>1713196426120</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713196426120</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tres primeras opc" />
+    <option name="LAST_COMMIT_MESSAGE" value="tres primeras opc" />
   </component>
 </project>

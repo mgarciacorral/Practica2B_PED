@@ -78,7 +78,7 @@ public class LECola<E> implements I_Cola<E>
         while (!this.esVacia())
         {
             elemento = this.desencolar();
-            while (!colaAux.esVacia() && ((Comparable)colaAux.primero()).compareTo(elemento) < 0)
+            while (!colaAux.esVacia() && ((Comparable)colaAux.primero()).compareTo(elemento) > 0)
             {
                 elementoAux = colaAux.desencolar();
                 this.encolar(elementoAux);
@@ -90,5 +90,21 @@ public class LECola<E> implements I_Cola<E>
             elementoAux = colaAux.desencolar();
             this.encolar(elementoAux);
         }
+    }
+
+    public void toStringIterativo()
+    {
+        if (primero.getSiguiente() == null)
+        {
+            System.out.println("Lista vacia");
+            return;
+        }
+        NodoLEG<E> actual = primero.getSiguiente();
+        while (actual != null)
+        {
+            System.out.print(actual.getElemento() + " ");
+            actual = actual.getSiguiente();
+        }
+        System.out.println();
     }
 }
