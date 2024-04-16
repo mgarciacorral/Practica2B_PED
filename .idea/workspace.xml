@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7b7eb0c-f864-4628-9490-25ba702b49da" name="Changes" comment="tres primeras opc">
+    <list default="true" id="b7b7eb0c-f864-4628-9490-25ba702b49da" name="Changes" comment="orddenar arreglado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Carrera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Carrera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Corredor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corredor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/ArrayCola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/ArrayCola.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/LECola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Librerias/EstructurasDatos/Lineales/LECola.java" afterDir="false" />
@@ -74,7 +73,8 @@
       <workItem from="1713194114748" duration="1143000" />
       <workItem from="1713195941809" duration="449000" />
       <workItem from="1713257921719" duration="79000" />
-      <workItem from="1713259444985" duration="1049000" />
+      <workItem from="1713259444985" duration="1388000" />
+      <workItem from="1713282543708" duration="1600000" />
     </task>
     <task id="LOCAL-00001" summary="tres primeras opc">
       <option name="closed" value="true" />
@@ -84,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713196426120</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="arreglos varios">
+      <option name="closed" value="true" />
+      <created>1713261032225</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713261032225</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +100,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tres primeras opc" />
-    <option name="LAST_COMMIT_MESSAGE" value="tres primeras opc" />
+    <MESSAGE value="arreglos varios" />
+    <MESSAGE value="orddenar arreglado" />
+    <option name="LAST_COMMIT_MESSAGE" value="orddenar arreglado" />
   </component>
 </project>

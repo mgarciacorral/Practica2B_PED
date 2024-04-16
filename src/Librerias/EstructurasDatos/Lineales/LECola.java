@@ -70,41 +70,71 @@ public class LECola<E> implements I_Cola<E>
         return primero == null;
     }
 
-    public void ordenarAscendente()
-    {
-        LECola<E> colaAux = new LECola<E>();
-        E elemento;
-        E elementoAux;
-        while (!this.esVacia())
-        {
-            elemento = this.desencolar();
-            while (!colaAux.esVacia() && ((Comparable)colaAux.primero()).compareTo(elemento) > 0)
-            {
-                elementoAux = colaAux.desencolar();
-                this.encolar(elementoAux);
-            }
-            colaAux.encolar(elemento);
-        }
-        while (!colaAux.esVacia())
-        {
-            elementoAux = colaAux.desencolar();
-            this.encolar(elementoAux);
-        }
-    }
-
     public void toStringIterativo()
     {
-        if (primero.getSiguiente() == null)
+        if (primero == null)
         {
             System.out.println("Lista vacia");
             return;
         }
-        NodoLEG<E> actual = primero.getSiguiente();
+        NodoLEG<E> actual = primero;
         while (actual != null)
         {
-            System.out.print(actual.getElemento() + " ");
+            System.out.println(actual.getElemento().toString());
             actual = actual.getSiguiente();
         }
         System.out.println();
+    }
+
+    public void reverse()
+    {
+        if(!esVacia())
+        {
+            E elemento = desencolar();
+            reverse();
+            encolar(elemento);
+        }
+    }
+
+    public LECola<E> clone()
+    {
+        LECola<E> clon = new LECola<E>();
+        for(int i = 0; i < talla; i++)
+        {
+            E elemento = this.desencolar();
+            clon.encolar(elemento);
+            this.encolar(elemento);
+        }
+        return clon;
+    }
+    public LECola<E> ordenarDesc()
+    {
+        LECola<E> original = clone();
+        LECola<E> colaOrdenada = new LECola<E>();
+        while (!this.esVacia()) {
+            E elementoActual = desencolar();
+            while (!colaOrdenada.esVacia() && ((Comparable)elementoActual).compareTo(colaOrdenada.primero()) > 0) {
+                this.encolar(colaOrdenada.desencolar());
+            }
+            colaOrdenada.encolar(elementoActual);
+        }
+
+        while (!original.esVacia()) {
+            this.encolar(original.desencolar());
+        }
+
+        return colaOrdenada;
+    }
+    public void imprimirOrdenadoDesc()
+    {
+        LECola<E> aux = ordenarDesc();
+        aux.toStringIterativo();
+    }
+
+    public void imprimirOrdenadoAsc()
+    {
+        LECola<E> aux = ordenarDesc();
+        aux.reverse();
+        aux.toStringIterativo();
     }
 }

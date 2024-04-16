@@ -2,9 +2,11 @@ import java.time.LocalDate;
 import java.util.Scanner;
 import Librerias.EstructurasDatos.Lineales.LECola;
 
+
 public class Menu
 {
     private LECola<Corredor> colaCorredores = null;
+    private Corredor ganador = null;
     private Carrera carrera = null;
     public Menu()
     {
@@ -70,7 +72,7 @@ public class Menu
                 case 4:
                     if(carrera != null && !colaCorredores.esVacia())
                     {
-                        //aqui la llamada a la opcion
+                        mostrarTiempos();
                         pause();
                     }else {
                         System.out.println("Primero debes registrar los datos de la carrera y los corredores");
@@ -80,7 +82,7 @@ public class Menu
                 case 5:
                     if(carrera != null && !colaCorredores.esVacia())
                     {
-                        //aqui la llamada a la opcion
+                        mostrarTiemposOrdenados();
                         pause();
                     }else {
                         System.out.println("Primero debes registrar los datos de la carrera y los corredores");
@@ -90,7 +92,7 @@ public class Menu
                 case 6:
                     if(carrera != null && !colaCorredores.esVacia())
                     {
-                        //aqui la llamada a la opcion
+                        mostrarResumenFinal();
                         pause();
                     }else {
                         System.out.println("Primero debes registrar los datos de la carrera y los corredores");
@@ -157,7 +159,8 @@ public class Menu
                 int minutos = Integer.parseInt(tiempoArray[1]);
                 int segundos = Integer.parseInt(tiempoArray[2]);
 
-                colaCorredores.encolar(new Corredor(dorsal, nombre, horas, minutos, segundos));
+                Corredor corredor = new Corredor(dorsal, nombre, horas, minutos, segundos);
+                colaCorredores.encolar(corredor);
 
                 System.out.print("Desea introducir otro corredor? 1. Si 0. No: ");
                 opc = sc.nextInt();
@@ -181,7 +184,8 @@ public class Menu
             corredor = colaCorredores.desencolar();
             if(corredor.getDorsal() == dorsal)
             {
-                corredor.mostrarDatos();
+                System.out.println("Dorsal\t\tNombre\t\t\tTiempo");
+                System.out.println(corredor.toString());
                 encontrado = true;
             }
             colaAux.encolar(corredor);
@@ -194,6 +198,69 @@ public class Menu
         {
             System.out.println("Corredor no encontrado");
         }
+    }
+
+    public void mostrarTiempos(){
+        LECola<Corredor> colaAux = new LECola<Corredor>();
+        System.out.println("Dorsal\t\tNombre\t\t\tTiempo");
+        Corredor corredor = null;
+        while(!colaCorredores.esVacia())
+        {
+            corredor = colaCorredores.desencolar();
+            System.out.println(corredor.toString());
+            colaAux.encolar(corredor);
+        }
+        while(!colaAux.esVacia()){
+            colaCorredores.encolar(colaAux.desencolar());
+        }
+    }
+
+
+    public void mostrarTiemposOrdenados(){
+        System.out.println("Dorsal\t\tNombre\t\t\tTiempo");
+        colaCorredores.imprimirOrdenadoAsc();
+    }
+
+    public void mostrarResumenFinal(){
+        System.out.println("\t\tCARRERA: ");
+        System.out.println("Nombre de la carrera: \"" + carrera.getNombre()+ "\"");
+        System.out.println("Distancia de la carrera: " + carrera.getDistancia());
+        System.out.println("Poblacion de la carrera: " + carrera.getPoblacion());
+        System.out.println("Fecha de la carrera: " + carrera.getFecha());
+        System.out.println("Distancia de la carrera: " + carrera.getDistancia());
+
+        System.out.println("\n\n\t\tRESUMEN FINAL: ");
+        System.out.println("-Número de corredores participantes en la carrera: " + colaCorredores.getTalla());
+        System.out.println("-Vencedor/a de la carrera: " + ganador.getNombre() + "(Dorsal " + ganador.getDorsal() + ")" + "-> Tiempo total: " + ganador.getTiempoH() + ":" + ganador.getTiempoM() + ":" + ganador.getTiempoS());
+
+        System.out.println("-Tiempo medio empleado por los corredores: " + tiempoMedio());
+    }
+
+
+
+    public String tiempoMedio(){
+        LECola<Corredor> colaAux = new LECola<Corredor>();
+        int horas = 0;
+        int minutos = 0;
+        int segundos = 0;
+        while(!colaCorredores.esVacia())
+        {
+            Corredor corredor = colaCorredores.desencolar();
+            horas += corredor.getTiempoH();
+            minutos += corredor.getTiempoM();
+            segundos += corredor.getTiempoS();
+            colaAux.encolar(corredor);
+        }
+        while(!colaAux.esVacia())
+        {
+            colaCorredores.encolar(colaAux.desencolar());
+        }
+        horas = horas/colaCorredores.getTalla();
+        minutos = minutos/colaCorredores.getTalla();
+        segundos = segundos/colaCorredores.getTalla();
+
+        return horas + ":" + minutos + ":" + segundos;
+
     }
 
     public void pause() {
