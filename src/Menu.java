@@ -222,6 +222,12 @@ public class Menu
     }
 
     public void mostrarResumenFinal(){
+        Corredor ganador;
+        LECola<Corredor> colaAux = new LECola<Corredor>();
+        colaAux = colaCorredores.ordenarDesc();
+        colaAux.reverse();
+        ganador = colaAux.desencolar();
+
         System.out.println("\t\tCARRERA: ");
         System.out.println("Nombre de la carrera: \"" + carrera.getNombre()+ "\"");
         System.out.println("Distancia de la carrera: " + carrera.getDistancia());
